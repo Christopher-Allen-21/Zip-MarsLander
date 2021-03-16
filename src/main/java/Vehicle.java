@@ -71,21 +71,11 @@ public class Vehicle {
     }
 
     public boolean stillFlying() {
-        if(Altitude>0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return Altitude>0;
     }
     public boolean outOfFuel() {
         // return true if fuel is less than or equal to zero
-        if(Fuel<=0){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return Fuel<=0;
     }
 
     public DescentEvent getStatus(int tick) {

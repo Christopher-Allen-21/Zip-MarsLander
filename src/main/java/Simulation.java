@@ -25,7 +25,6 @@ public class Simulation {
         s = s + "You must land at a speed of 2 or 1. Good Luck!\n\n";
         return s;
     }
-
     public String getHeader() {
         String s = "";
         s = s + "\nTime\t";
@@ -37,6 +36,7 @@ public class Simulation {
         s = s + "------\t\t"; s = s + "----\n";
         return s;
     }
+
 
 
     public void printString(String string) {
@@ -76,10 +76,11 @@ public class Simulation {
         // create a new Simulation object with a random starting altitude
         // create a new BurnInputStream
         // pass the new BurnInputStream to the runSimulation method
-        Vehicle starship21 = new Vehicle(10000);
+        Vehicle starship21 = new Vehicle(9000);
         Simulation sim1 = new Simulation(starship21);
-        BurnInputStream burnStream = new BurnInputStream();
-        sim1.runSimulation(burnStream);
+        //BurnInputStream burnStream = new BurnInputStream();
+        OnBoardComputer computer = new OnBoardComputer();
+        sim1.runSimulation(computer);
     }
 
 }
